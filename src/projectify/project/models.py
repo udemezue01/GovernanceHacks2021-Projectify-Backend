@@ -74,3 +74,17 @@ class Project(models.Model):
 
 		return f'{self.title}'
 
+
+
+
+class Review(models.Model):
+	user 			= 	models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+	target 			= 	models.ForeignKey(Guide, on_delete = models.CASCADE)
+	text 			= 	models.CharField(max_length = 4000, blank = True)
+	rating 			= 	models.BooleanField(blank = True, default = False)
+
+	def __str__(self):
+
+		return f'{self.user.full_name} - Review'
+	
+

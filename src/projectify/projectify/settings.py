@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
     'project',
     'account',
+
+    'profile',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Graph QL settings
+
+GRAPHENE = {
+    'SCHEMA': 'travelly.graph.schema.schema',
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ],
+}
+
+
+
+AUTHENTICATION_BACKENDS = [
+    'graphql_jwt.backends.JSONWebTokenBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
+# The Auth User Model
 
 AUTH_USER_MODEL = 'account.user'
 
