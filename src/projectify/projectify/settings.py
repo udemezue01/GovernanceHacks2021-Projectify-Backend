@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'account',
 
     'profile',
+
+
 ]
 
 MIDDLEWARE = [
@@ -56,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'projectify.urls'
@@ -131,7 +134,7 @@ STATIC_URL = '/static/'
 # Graph QL settings
 
 GRAPHENE = {
-    'SCHEMA': 'travelly.graph.schema.schema',
+    'SCHEMA': 'projectify.graph.schema.schema',
     'MIDDLEWARE': [
         'graphql_jwt.middleware.JSONWebTokenMiddleware',
     ],
