@@ -44,8 +44,11 @@ INSTALLED_APPS = [
 
     'project',
     'account',
+    'userprofile',
+    'post',
 
-    'profile',
+    'graphene_django',
+    
 
 
 ]

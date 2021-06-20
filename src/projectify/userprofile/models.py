@@ -16,6 +16,6 @@ class Profile(models.Model):
 
 	def __str__(self):
 
-		return return f'{self.user.full_name} - Profile'
+		return  f'{self.user.full_name} - Profile'
 
 		

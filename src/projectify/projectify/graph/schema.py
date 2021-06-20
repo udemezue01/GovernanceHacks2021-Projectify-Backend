@@ -34,9 +34,9 @@ class Mutation(graphene.ObjectType):
 
 	# The Token Auth Mutation
 
-	# token_auth = ObtainJSONWebToken.Field()
-	# verify_token = graphql_jwt.Verify.Field()
-	# refresh_token = graphql_jwt.Refresh.Field()
+	token_auth = ObtainJSONWebToken.Field()
+	verify_token = graphql_jwt.Verify.Field()
+	refresh_token = graphql_jwt.Refresh.Field()
 
 	# The Profile Create, Update and Delete Mutation
 
@@ -59,15 +59,13 @@ class Mutation(graphene.ObjectType):
 	# comment_update 		=  CommentUpdateMutation.Field()
 	# comment_delete		=  CommentDeleteMutation.Field()
 
-	# The Guide Create, Update and Delete Mutation
 
 	
 
 
 
-
 class Query(Query, graphene.ObjectType):
-
+	
 	pass
 
 schema = graphene.Schema(query  = Query, mutation = Mutation)
