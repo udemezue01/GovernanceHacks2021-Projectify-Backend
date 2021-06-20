@@ -19,13 +19,13 @@ from project.models import (
 
 	)
 
-# from post.models import (
+from post.models import (
 
 
-# 	Post,
-# 	Comment,
+	Post,
+	Comment,
 
-# 	)
+	)
 
 from userprofile.models import(
 
@@ -80,6 +80,13 @@ class ProjectType(DjangoObjectType):
 	class Meta:
 
 		model  = Project
+
+		# The Review Model
+
+class ReviewType(DjangoObjectType):
+	class Meta:
+
+		model = Review
 
 
 		# The Post Model
