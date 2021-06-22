@@ -47,7 +47,11 @@ INSTALLED_APPS = [
     'userprofile',
     'post',
 
+    # Third party apps
+
     'graphene_django',
+
+    'corsheaders',
     
 
 
@@ -61,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+     'corsheaders.middleware.CorsMiddleware',
 
 ]
 
@@ -150,6 +156,14 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
+
+
+# Django Cors header settings
+
+CORS_ALLOWED_ORIGINS = [
+    'http://read.only.com',
+    'http://change.allowed.com',
+]
 
 # The Auth User Model
 
