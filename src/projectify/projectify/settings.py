@@ -138,6 +138,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+
+# The Auth User Model
+
+AUTH_USER_MODEL = 'account.user'
+
+# Third Party Apps Settings
+
+
+# Django Cors header settings
+
+CORS_ALLOWED_ORIGINS = [
+    
+    'http://127.0.0.1:8000/',
+    'http://localhost:8080/',
+]
+
 STATIC_URL = '/static/'
 
 # Graph QL settings
@@ -155,18 +172,3 @@ AUTHENTICATION_BACKENDS = [
     'graphql_jwt.backends.JSONWebTokenBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
-
-
-
-# Django Cors header settings
-
-CORS_ALLOWED_ORIGINS = [
-    'http://read.only.com',
-    'http://change.allowed.com',
-]
-
-# The Auth User Model
-
-AUTH_USER_MODEL = 'account.user'
-
-
