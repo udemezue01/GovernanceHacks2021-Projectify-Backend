@@ -1,6 +1,7 @@
 aniso8601==8.1.1
-asgiref==3.3.1
-Django==3.1.7
+asgiref==3.3.4
+bidict==0.21.2
+Django==3.2.4
 django-cors-headers==3.7.0
 django-graphql-jwt==0.3.2
 graphene==3.0b7
@@ -9,7 +10,9 @@ graphql-core==3.1.5
 graphql-relay==3.1.0
 promise==2.3
 PyJWT==2.1.0
-python-dotenv==0.16.0
+python-dotenv==0.18.0
+python-engineio==4.2.0
+python-socketio==5.3.0
 pytz==2021.1
 six==1.16.0
 sqlparse==0.4.1
